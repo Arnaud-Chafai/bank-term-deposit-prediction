@@ -122,7 +122,7 @@ Finalmente, los clusters formados fueron proyectados en el espacio definido por 
   1. **Economía en Crecimiento Fuerte**  
   2. **Economía en Recesión**
 
-
+## **Resultados**
 ```python
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV
@@ -172,7 +172,9 @@ test_rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 print(f"\nRMSE en el conjunto de prueba: {test_rmse:.4f}")
 
 ```
-## **Resultados**
+
+
+
 - **Modelo ganador:** Random Forest con validación cruzada y optimización de hiperparámetros.
 - **Puntuación final:**  
   - **AUC en validación:** 0.803  
