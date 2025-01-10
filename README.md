@@ -72,13 +72,40 @@ El dataset contiene información de clientes bancarios recopilada a partir de ca
 
 ## **Análisis de Clustering y Feature Engineering**
 
-### **Clusters del Contexto Económico y Social + PCA** 📊  
-Para enriquecer el análisis, se realizó una **reducción de dimensionalidad con PCA** sobre las variables económicas. Con los componentes principales obtenidos, se aplicó **K-means** para identificar patrones económicos.
+### **Análisis de Correlación y Reducción de Dimensionalidad (PCA)**  
+Durante la exploración de los datos, se observó que varias variables socioeconómicas presentaban una **alta correlación** entre sí. Esto puede generar redundancia y afectar el rendimiento del modelo, por lo que se decidió realizar una **reducción de dimensionalidad**.
 
+#### **Mapa de Correlación:**  
+El siguiente mapa de calor muestra las correlaciones entre las variables socioeconómicas:
 
 <div align="center">
-  <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/Silhouette.png">
+  <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/correlation_map.png" alt="Mapa de Correlación" width="600">
 </div>
+
+---
+
+### **Aplicación de PCA (Análisis de Componentes Principales)**  
+Se aplicó **PCA** (Análisis de Componentes Principales) para reducir la cantidad de variables manteniendo la mayor cantidad posible de información relevante.
+
+- **Explicación:** Se conservaron **tres componentes principales** que explican el **99.3% de la variabilidad** de los datos.
+- El número de componentes se seleccionó utilizando el **método del codo**, como se muestra en la siguiente gráfica:
+
+<div align="center">
+  <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/elbow_method.png" alt="Método del Codo" width="600">
+</div>
+
+---
+
+### **Clusters del Contexto Económico y Social + PCA** 📊  
+Con los **tres componentes principales** obtenidos, se aplicó **K-means** para identificar patrones económicos y agrupar a los clientes en diferentes clusters según su contexto socioeconómico.
+
+<div align="center">
+  <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/Silhouette.png" alt="Silhouette Score" width="600">
+</div>
+
+---
+
+### **Descripción de los Clusters Económicos:**  
 
 ### 🟢 **Economía en Crecimiento Fuerte**  
 - 📈 Alta **creación de empleo**  
@@ -87,11 +114,27 @@ Para enriquecer el análisis, se realizó una **reducción de dimensionalidad co
 ### 🔴 **Economía en Recesión**  
 - 📉 Muy baja **creación de empleo**  
 - **Indicador principal:** `emp_var_rate` muy por debajo de la media  
-<div align="center">
-  <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/pca.png">
-</div>
+
 ---
 
+### **Visualización de los Clusters en el Espacio PCA:**  
+Finalmente, los clusters formados fueron proyectados en el espacio definido por los **componentes principales**.
+
+<div align="center">
+  <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/pca.png" alt="Visualización PCA Clusters" width="600">
+</div>
+
+---
+
+### **Resumen:**  
+- Se realizó un análisis de correlación para identificar variables redundantes.
+- Se aplicó **PCA** para reducir las dimensiones y mantener el **99.3%** de la información.
+- Utilizando los componentes principales, se ejecutó **K-means** para identificar **clusters económicos**.
+- Los resultados evidencian dos grupos principales:  
+  1. **Economía en Crecimiento Fuerte**  
+  2. **Economía en Recesión**
+
+---
 
 ```python
 from sklearn.ensemble import RandomForestRegressor
