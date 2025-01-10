@@ -110,9 +110,6 @@ Para enriquecer el análisis, se realizó un clustering de las variables económ
 
 ### **Transformación de Características Categóricas**  
 
-
-### **Código para replicar el gráfico:**
-
 ```python
 # Importar bibliotecas
 import seaborn as sns
@@ -155,8 +152,9 @@ plt.show()
 Este gráfico de barras muestra cómo las combinaciones de estado civil e hipoteca influyen en la decisión de suscribir un depósito a plazo.
 
 <div align="center">
-  <img src="[ruta_a_la_imagen_del_barchart.png" alt="Gráfico de Barras de Feature Combinada" width="600](https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/Feature.png)">
+  <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/Feature.png">
 </div>
+---
 
 ```
 ## **Resultados**
