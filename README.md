@@ -1,11 +1,14 @@
 ## **Descripción del Proyecto**
-Este repositorio contiene un proyecto de machine learning desarrollado para una **competencia de Kaggle**. El objetivo es predecir si un cliente bancario suscribirá un depósito a plazo utilizando un conjunto de datos de campañas de marketing anteriores. El proyecto aborda los siguientes puntos clave:
+Este repositorio contiene un proyecto de machine learning desarrollado para una **competencia de Kaggle**. El objetivo es predecir si un cliente bancario suscribirá un depósito a plazo utilizando un conjunto de datos de campañas de marketing anteriores.
+Cabe destacar que la **métrica de evaluación utilizada es el AUC **, ya que es la métrica de referencia establecida por la competencia para medir el desempeño de los modelos participantes.
+
+El proyecto aborda los siguientes puntos clave:
 - Exploración y visualización de los datos para identificar patrones relevantes.
 - Limpieza de datos y manejo de valores desconocidos en variables categóricas.
 - Creación de nuevas características (feature engineering).
 - Prueba de distintos modelos de clasificación.
 - Optimización del mejor modelo mediante **Grid Search**.
-- Evaluación de resultados con **curvas ROC y matrices de confusión**.
+- Evaluación de los resultados utilizando la **métrica AUC ** como referencia principal para medir el desempeño del modelo.
 
 ---
 
