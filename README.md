@@ -108,53 +108,54 @@ Para enriquecer el análisis, se realizó un clustering de las variables económ
 </div>
 ---
 
-### **Transformación de Características Categóricas**  
 
 ```python
-# Importar bibliotecas
-import seaborn as sns
-import matplotlib.pyplot as plt
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import make_scorer, mean_squared_error
+import numpy as np
 
-# Crear una figura con tamaño específico
-plt.figure(figsize=(10, 4))
+# ===== Parámetros para GridSearch =====
+param_grid = {
+    'n_estimators': [200, 300, 400],
+    'max_depth': [7, 9, 11],
+    'min_samples_leaf': [3, 5, 7],
+    'min_samples_split': [25, 35, 45],
+    'max_features': ['log2', 'sqrt'],
+    'max_samples': [0.8, 0.9, 0.95],
+}
 
-# Crear el gráfico de conteo para la característica combinada
-sns.countplot(
-    x='status_marital_housing', 
-    data=df, 
-    hue='output', 
-    linewidth=1.5, 
-    edgecolor='black', 
-    palette="coolwarm"
+# ===== Crear el modelo =====
+rf_model = RandomForestRegressor(random_state=42)
+
+# ===== Definir el GridSearchCV =====
+grid_search = GridSearchCV(
+    estimator=rf_model,
+    param_grid=param_grid,
+    scoring=make_scorer(mean_squared_error, greater_is_better=False),  # MSE negativo para minimizar
+    cv=5,                   # Validación cruzada de 5 folds
+    n_jobs=-1,              # Usar todos los núcleos disponibles
+    verbose=2               # Mostrar progreso detallado
 )
 
-# Renombrar las etiquetas del eje X manualmente
-plt.xticks(
-    ticks=[0, 1, 2, 3], 
-    labels=[
-        "Solteros con hipoteca", 
-        "Solteros sin hipoteca", 
-        "En pareja con hipoteca", 
-        "En pareja sin hipoteca"
-    ]
-)
+# ===== Ejecutar GridSearch =====
+grid_search.fit(X_train, y_train)
 
-# Configurar título y etiquetas de los ejes
-plt.title('Distribución del Estado Marital y Hipoteca por Output')
-plt.xlabel('Estado Marital y Hipoteca')
-plt.ylabel('Cantidad')
-plt.grid(axis="y", linestyle='--', color="black", alpha=0.3)
-plt.gcf().autofmt_xdate()
+# ===== Mostrar los mejores parámetros =====
+print("\n🔍 Mejores parámetros encontrados:")
+print(grid_search.best_params_)
 
-# Mostrar el gráfico
-plt.show()
-```
-Este gráfico de barras muestra cómo las combinaciones de estado civil e hipoteca influyen en la decisión de suscribir un depósito a plazo.
+# ===== Mejor Score (RMSE) =====
+best_rmse = np.sqrt(-grid_search.best_score_)
+print(f"\nMejor RMSE obtenido: {best_rmse:.4f}")
 
-<div align="center">
-  <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/Feature.png">
-</div>
----
+# ===== Crear el modelo final con los mejores parámetros =====
+best_rf_model = grid_search.best_estimator_
+
+# ===== Evaluar el modelo en el conjunto de prueba =====
+y_pred = best_rf_model.predict(X_test)
+test_rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+print(f"\nRMSE en el conjunto de prueba: {test_rmse:.4f}")
 
 ```
 ## **Resultados**
