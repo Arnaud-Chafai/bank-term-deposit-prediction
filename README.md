@@ -31,7 +31,48 @@ El dataset contiene información de clientes bancarios recopilada a partir de ca
 - **Datos del cliente:** edad, estado civil, nivel educativo, entre otros.
 - **Información del último contacto de la campaña:** tipo de comunicación, día y mes del contacto.
 - **Atributos macroeconómicos:** tasa de empleo trimestral, tasa Euribor a 3 meses, índice de precios al consumidor.
+#### 🏦 **Datos del Cliente Bancario**
+- **`age`**: Edad del cliente (numérico).  
+- **`job`**: Tipo de trabajo (categórico).  
+  - Valores: **admin.**, **blue-collar**, **entrepreneur**, **housemaid**, **management**, **retired**, **self-employed**, **services**, **student**, **technician**, **unemployed**, **unknown**.  
+- **`marital_status`**: Estado civil (categórico).  
+  - Valores: **divorced**, **married**, **single**, **unknown** (Nota: **divorced** incluye divorciados y viudos).  
+- **`education_level`**: Nivel de educación (categórico).  
+  - Valores: **basic.4y**, **basic.6y**, **basic.9y**, **high.school**, **illiterate**, **professional.course**, **university.degree**, **unknown**.  
+- **`is_default`**: ¿Tiene crédito en impago? (categórico).  
+  - Valores: **no**, **yes**, **unknown**.  
+- **`housing_type`**: ¿Tiene préstamo hipotecario? (categórico).  
+  - Valores: **no**, **yes**, **unknown**.  
+- **`loan`**: ¿Tiene préstamo personal? (categórico).  
+  - Valores: **no**, **yes**, **unknown**.  
 
+#### 📞 **Datos del Último Contacto de la Campaña Actual**
+- **`contact`**: Tipo de comunicación (categórico).  
+  - Valores: **cellular**, **telephone**.  
+- **`month`**: Mes del último contacto (categórico).  
+  - Valores: **jan**, **feb**, **mar**, …, **nov**, **dec**.  
+- **`day_of_week`**: Día de la semana del último contacto (categórico).  
+  - Valores: **mon**, **tue**, **wed**, **thu**, **fri**.  
+
+#### 🔄 **Otros Atributos**
+- **`campaign`**: Número de contactos realizados durante esta campaña (numérico).  
+- **`pdays`**: Días transcurridos desde el último contacto en una campaña anterior (numérico; **999** significa que no fue contactado previamente).  
+- **`previous`**: Número de contactos previos a esta campaña (numérico).  
+- **`poutcome`**: Resultado de la campaña de marketing anterior (categórico).  
+  - Valores: **failure**, **nonexistent**, **success**.  
+
+#### 📈 **Atributos del Contexto Económico y Social**
+- **`emp_var_rate`**: Tasa de variación del empleo - indicador trimestral (numérico).  
+- **`cons_price_index`**: Índice de precios al consumidor - indicador mensual (numérico).  
+- **`cons_conf_index`**: Índice de confianza del consumidor - indicador mensual (numérico).  
+- **`euribor_3m`**: Tasa Euribor a 3 meses - indicador diario (numérico).  
+- **`n_employed`**: Número de empleados - indicador trimestral (numérico).  
+
+---
+
+### 🎯 **Variable de Salida (Objetivo)**
+- **`output`**: ¿El cliente ha suscrito un depósito a plazo? (binario).  
+  - Valores: **yes**, **no**.  
 ---
 
 ## **Flujo del Proyecto**
@@ -96,9 +137,3 @@ Se utilizó el Silhouette Score para validar la calidad de los clusters formados
   - **AUC en validación:** 0.803  
   - **AUC en Kaggle:** 0.780  
 
----
-
-## **Cómo Ejecutar el Proyecto**
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/tuusuario/bank-term-deposit-prediction.git
