@@ -78,8 +78,8 @@ Durante la exploración de los datos, se observó que varias variables socioecon
 #### **Mapa de Correlación:**  
 El siguiente mapa de calor muestra las correlaciones entre las variables socioeconómicas:
 
-<div align="center">
-  <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/correlation_map.png" alt="Mapa de Correlación" width="600">
+
+<img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/Correlaci%C3%B3n.png">
 </div>
 
 ---
@@ -90,8 +90,7 @@ Se aplicó **PCA** (Análisis de Componentes Principales) para reducir la cantid
 - **Explicación:** Se conservaron **tres componentes principales** que explican el **99.3% de la variabilidad** de los datos.
 - El número de componentes se seleccionó utilizando el **método del codo**, como se muestra en la siguiente gráfica:
 
-<div align="center">
-  <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/elbow_method.png" alt="Método del Codo" width="600">
+<img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/codo.png">
 </div>
 
 ---
