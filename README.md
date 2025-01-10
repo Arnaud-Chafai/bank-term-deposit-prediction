@@ -10,7 +10,6 @@ Este repositorio contiene un proyecto de machine learning desarrollado para una 
 ---
 
 ## **Dataset**
-El dataset contiene información de clientes bancarios recopilada a partir de campañas de marketing anteriores.
 
 - **Atributos macroeconómicos:** tasa de empleo trimestral, tasa Euribor a 3 meses, índice de precios al consumidor.
 #### 🏦 **Datos del Cliente Bancario**
