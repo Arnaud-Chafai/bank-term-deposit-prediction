@@ -93,7 +93,7 @@ El dataset contiene información de clientes bancarios recopilada a partir de ca
 Para enriquecer el análisis, se realizó un clustering de las variables económicas clave (`emp_var_rate` y `euribor_3m`) mediante **K-means**, seguido de una reducción de dimensionalidad con **PCA** para visualizar los grupos formados.
 
 <div align="center">
-  <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/pca.png">
+  <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/Silhouette.png">
 </div>
 
 ### 🟢 **Economía en Crecimiento Fuerte**  
@@ -103,20 +103,13 @@ Para enriquecer el análisis, se realizó un clustering de las variables económ
 ### 🔴 **Economía en Recesión**  
 - 📉 Muy baja **creación de empleo**  
 - **Indicador principal:** `emp_var_rate` muy por debajo de la media  
-
+<div align="center">
+  <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/pca.png">
+</div>
 ---
 
 ### **Transformación de Características Categóricas**  
-Se creó una nueva característica combinando estado civil y préstamo hipotecario (`status_marital_housing`) para identificar relaciones más complejas con la variable objetivo.
 
-#### **Distribución del Estado Marital y Hipoteca por Output:**  
-Este gráfico de barras muestra cómo las combinaciones de estado civil e hipoteca influyen en la decisión de suscribir un depósito a plazo.
-
-<div align="center">
-  <img src="ruta_a_la_imagen_del_barchart.png" alt="Gráfico de Barras de Feature Combinada" width="600">
-</div>
-
----
 
 ### **Código para replicar el gráfico:**
 
@@ -158,6 +151,13 @@ plt.gcf().autofmt_xdate()
 
 # Mostrar el gráfico
 plt.show()
+```
+Este gráfico de barras muestra cómo las combinaciones de estado civil e hipoteca influyen en la decisión de suscribir un depósito a plazo.
+
+<div align="center">
+  <img src="[ruta_a_la_imagen_del_barchart.png" alt="Gráfico de Barras de Feature Combinada" width="600](https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/Feature.png)">
+</div>
+
 ```
 ## **Resultados**
 - **Modelo ganador:** Random Forest con validación cruzada y optimización de hiperparámetros.
