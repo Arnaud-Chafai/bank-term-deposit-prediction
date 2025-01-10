@@ -93,7 +93,7 @@ El dataset contiene información de clientes bancarios recopilada a partir de ca
 Para enriquecer el análisis, se realizó un clustering de las variables económicas clave (`emp_var_rate` y `euribor_3m`) mediante **K-means**, seguido de una reducción de dimensionalidad con **PCA** para visualizar los grupos formados.
 
 <div align="center">
-  <img src="ruta_a_la_imagen_del_pca.png" alt="PCA por Clusters" width="600">
+  <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/pca.png">
 </div>
 
 ### 🟢 **Economía en Crecimiento Fuerte**  
