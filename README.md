@@ -122,14 +122,13 @@ Finalmente, los clusters formados fueron proyectados en el espacio definido por 
 ---
 
 ### **Resumen:**  
-- Se realizó un análisis de correlación para identificar variables que no aportan valorn al modelo.
+- Se realizó un análisis de correlación para identificar variables que no aportan valor al modelo.
 - Se aplicó **PCA** para reducir las dimensiones y mantener el **99.3%** de la información.
 - Utilizando los componentes principales, se ejecutó **K-means** para identificar **clusters económicos**.
 - Los resultados evidencian dos grupos principales:  
   1. **Economía en Crecimiento Fuerte**  
   2. **Economía en Recesión**
 
----
 
 ```python
 from sklearn.ensemble import RandomForestRegressor
