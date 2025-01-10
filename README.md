@@ -1,5 +1,6 @@
-https://raw.githubusercontent.com/Arnaud-Chafai/bank-term-deposit-prediction/refs/heads/main/Screenshots/Bank.webp
+### BANK TERM DEPOSIT PREDICTION
 <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/bank.png">
+
 ## **Descripción del Proyecto**
 Este repositorio contiene un proyecto de machine learning desarrollado para una **competencia de Kaggle**. El objetivo es predecir si un cliente bancario suscribirá un depósito a plazo utilizando un conjunto de datos de campañas de marketing anteriores.
 Cabe destacar que la **métrica de evaluación utilizada es el AUC **, ya que es la métrica de referencia establecida por la competencia para medir el desempeño de los modelos participantes.
