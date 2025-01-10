@@ -76,31 +76,33 @@ El dataset contiene información de clientes bancarios recopilada a partir de ca
 
 ## **Flujo del Proyecto**
 1. **Exploración de datos:**  
-   Visualización y análisis para comprender la distribución de las variables y la relación entre estas y la variable objetivo (`output`).
+   - Visualización y análisis para comprender la distribución de las variables y la relación entre estas y la variable objetivo (`output`).
+   - Se realizaron gráficos de barras y gráficos de dispersión para identificar patrones y correlaciones.
 2. **Limpieza de datos:**  
    - Eliminación de valores irrelevantes y tratamiento de valores "unknown".
+   - Eliminación de duplicados y valores nulos.
 3. **Feature Engineering:**  
    - Creación de nuevas características relevantes para mejorar el rendimiento del modelo.
+   - Transformación de variables categóricas en variables binarias y combinación de variables clave.
 
 ---
 
 ## **Análisis de Clustering y Feature Engineering**
 
-### **Clusters del Contexto Económico y Social + PCA** 📊
-Para enriquecer el análisis, se realizó un clustering de las variables económicas clave (`emp_var_rate` y `euribor_3m`) mediante K-means, seguido de una reducción de dimensionalidad con PCA para visualizar los grupos formados.
+### **Clusters del Contexto Económico y Social + PCA** 📊  
+Para enriquecer el análisis, se realizó un clustering de las variables económicas clave (`emp_var_rate` y `euribor_3m`) mediante **K-means**, seguido de una reducción de dimensionalidad con **PCA** para visualizar los grupos formados.
 
 <div align="center">
   <img src="ruta_a_la_imagen_del_pca.png" alt="PCA por Clusters" width="600">
 </div>
 
-### 🟢 * Economía en Crecimiento Fuerte**  
-- **Razón:**  
-  - 📈 Alta **creación de empleo**  
+### 🟢 **Economía en Crecimiento Fuerte**  
+- 📈 Alta **creación de empleo**  
+- **Indicador principal:** `emp_var_rate` superior a la media  
 
-### 🔴  Economía en Recesión**  
-- **Razón:**  
-  - 📉 Muy baja **creación de empleo**  
-
+### 🔴 **Economía en Recesión**  
+- 📉 Muy baja **creación de empleo**  
+- **Indicador principal:** `emp_var_rate` muy por debajo de la media  
 
 ---
 
@@ -156,8 +158,7 @@ plt.gcf().autofmt_xdate()
 
 # Mostrar el gráfico
 plt.show()
----
-
+```
 ## **Resultados**
 - **Modelo ganador:** Random Forest con validación cruzada y optimización de hiperparámetros.
 - **Puntuación final:**  
