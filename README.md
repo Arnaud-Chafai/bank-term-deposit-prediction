@@ -79,7 +79,7 @@ El dataset contiene información de clientes bancarios recopilada a partir de ca
    - Visualización y análisis para comprender la distribución de las variables y la relación entre estas y la variable objetivo (`output`).
    - Se realizaron gráficos de barras y gráficos de dispersión para identificar patrones y correlaciones.
 2. **Limpieza de datos:**  
-   - Eliminación de valores irrelevantes y tratamiento de valores "unknown".
+   - Eliminación de valores irrelevantes.
    - Eliminación de duplicados y valores nulos.
 3. **Feature Engineering:**  
    - Creación de nuevas características relevantes para mejorar el rendimiento del modelo.
