@@ -65,7 +65,7 @@ El proyecto aborda los siguientes puntos clave:
 
 ---
 
-## **Ejemplo del Flujo de Trabajo en el Contexto Socioeconómico**  
+## **Ejemplo del Flujo de Trabajo para el Análisis Socioeconómico**  
 Este apartado muestra el flujo de trabajo seguido para el análisis de las variables socioeconómicas y cómo se trataron para mejorar el rendimiento de los modelos de machine learning.
 
 ### **Análisis de Correlación y Reducción de Dimensionalidad (PCA)**  
