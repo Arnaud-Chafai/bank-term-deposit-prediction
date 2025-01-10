@@ -1,8 +1,3 @@
-# **bank-term-deposit-prediction**
-
-**Proyecto de machine learning para la competencia de Kaggle sobre predicción de depósitos a plazo bancarios.** Se realiza una exploración y limpieza de datos, junto con la creación de características. Se prueban distintos modelos de clasificación como Regresión Logística, KNN, XGBoost y Random Forest. Finalmente, el modelo seleccionado fue un **Random Forest optimizado mediante Grid Search**, que obtuvo un **AUC de 0.803** en validación y **0.780** en la competencia.
-
----
 ## **Descripción del Proyecto**
 Este repositorio contiene un proyecto de machine learning desarrollado para una **competencia de Kaggle**. El objetivo es predecir si un cliente bancario suscribirá un depósito a plazo utilizando un conjunto de datos de campañas de marketing anteriores. El proyecto aborda los siguientes puntos clave:
 - Exploración y visualización de los datos para identificar patrones relevantes.
