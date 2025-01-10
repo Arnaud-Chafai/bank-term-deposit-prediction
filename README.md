@@ -163,5 +163,5 @@ print(f"\nRMSE en el conjunto de prueba: {test_rmse:.4f}")
 - **Modelo ganador:** Random Forest con validación cruzada y optimización de hiperparámetros.
 - **Puntuación final:**  
   - **AUC en validación:** 0.803  
-  - **AUC en Kaggle:** 0.780  
-
+  - **AUC en Kaggle:** 0.780
+ <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/Curve%20ROC.png">
