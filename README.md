@@ -3,12 +3,17 @@ Este repositorio contiene un proyecto de machine learning desarrollado para una 
 Cabe destacar que la **métrica de evaluación utilizada es el AUC **, ya que es la métrica de referencia establecida por la competencia para medir el desempeño de los modelos participantes.
 
 El proyecto aborda los siguientes puntos clave:
-- Exploración y visualización de los datos para identificar patrones relevantes.
-- Limpieza de datos y manejo de valores desconocidos en variables categóricas.
-- Creación de nuevas características (feature engineering).
-- Prueba de distintos modelos de clasificación.
-- Optimización del mejor modelo mediante **Grid Search**.
-- Evaluación de los resultados utilizando la **métrica AUC ** como referencia principal para medir el desempeño del modelo.
+- **Exploración y visualización de los datos** para identificar patrones relevantes.
+- **Limpieza de datos** y manejo de valores desconocidos.
+- **Análisis exploratorio de los datos** para entender mejor la distribución de las variables y sus correlaciones.
+- **Creación de nuevas características (feature engineering)** en base a las **variables categóricas**, que representan una proporción importante en el dataset.
+- **Clustering y reducción de dimensionalidad:**  
+  - Se aplicó **PCA** para reducir la cantidad de variables correlacionadas.
+  - Se realizaron **clusterings** para agrupar observaciones basadas en el contexto socioeconómico.
+- **Selección de características (feature selection)** para mejorar el rendimiento de los modelos.
+- **Prueba de distintos modelos de clasificación.**
+- **Optimización de los modelos mediante Grid Search** y ajuste de hiperparámetros.
+- **Evaluación de los resultados** utilizando la **métrica AUC (Área Bajo la Curva ROC)** como referencia principal para medir el desempeño de los modelos.
 
 ---
 
