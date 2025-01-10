@@ -27,9 +27,8 @@ Este repositorio contiene un proyecto de machine learning desarrollado para una 
 ---
 
 ## **Dataset**
-El dataset contiene información de clientes bancarios recopilada a partir de campañas de marketing anteriores. Algunas de las variables incluidas son:
-- **Datos del cliente:** edad, estado civil, nivel educativo, entre otros.
-- **Información del último contacto de la campaña:** tipo de comunicación, día y mes del contacto.
+El dataset contiene información de clientes bancarios recopilada a partir de campañas de marketing anteriores.
+
 - **Atributos macroeconómicos:** tasa de empleo trimestral, tasa Euribor a 3 meses, índice de precios al consumidor.
 #### 🏦 **Datos del Cliente Bancario**
 - **`age`**: Edad del cliente (numérico).  
@@ -94,26 +93,21 @@ Para enriquecer el análisis, se realizó un clustering de las variables económ
   <img src="ruta_a_la_imagen_del_pca.png" alt="PCA por Clusters" width="600">
 </div>
 
-### 🟢 **Cluster 0: Economía en Crecimiento Fuerte**  
+### 🟢 * Economía en Crecimiento Fuerte**  
 - **Razón:**  
   - 📈 Alta **creación de empleo**  
-- **Indicadores Clave:**  
-  - 🔹 `emp_var_rate`: Superior a la media en **+1298.6%**  
-  - 🔹 `euribor_3m`: Superior a la media en **+33.1%**  
 
-### 🔴 **Cluster 1: Economía en Recesión**  
+### 🔴  Economía en Recesión**  
 - **Razón:**  
   - 📉 Muy baja **creación de empleo**  
-- **Indicadores Clave:**  
-  - 🔹 `emp_var_rate`: Inferior a la media en **-2656.4%**  
-  - 🔹 `euribor_3m`: Inferior a la media en **-67.7%**
+
 
 ---
 
-### **Transformación de Características Categóricas**
+### **Transformación de Características Categóricas**  
 Se creó una nueva característica combinando estado civil y préstamo hipotecario (`status_marital_housing`) para identificar relaciones más complejas con la variable objetivo.
 
-#### **Distribución del Estado Marital y Hipoteca por Output:**
+#### **Distribución del Estado Marital y Hipoteca por Output:**  
 Este gráfico de barras muestra cómo las combinaciones de estado civil e hipoteca influyen en la decisión de suscribir un depósito a plazo.
 
 <div align="center">
@@ -122,13 +116,46 @@ Este gráfico de barras muestra cómo las combinaciones de estado civil e hipote
 
 ---
 
-### **Silhouette Score para Validación de Clustering**
-Se utilizó el Silhouette Score para validar la calidad de los clusters formados y asegurar que la agrupación refleja correctamente las diferencias en el contexto económico-social.
+### **Código para replicar el gráfico:**
 
-<div align="center">
-  <img src="ruta_a_la_imagen_del_silhouette_score.png" alt="Silhouette Score" width="600">
-</div>
+```python
+# Importar bibliotecas
+import seaborn as sns
+import matplotlib.pyplot as plt
 
+# Crear una figura con tamaño específico
+plt.figure(figsize=(10, 4))
+
+# Crear el gráfico de conteo para la característica combinada
+sns.countplot(
+    x='status_marital_housing', 
+    data=df, 
+    hue='output', 
+    linewidth=1.5, 
+    edgecolor='black', 
+    palette="coolwarm"
+)
+
+# Renombrar las etiquetas del eje X manualmente
+plt.xticks(
+    ticks=[0, 1, 2, 3], 
+    labels=[
+        "Solteros con hipoteca", 
+        "Solteros sin hipoteca", 
+        "En pareja con hipoteca", 
+        "En pareja sin hipoteca"
+    ]
+)
+
+# Configurar título y etiquetas de los ejes
+plt.title('Distribución del Estado Marital y Hipoteca por Output')
+plt.xlabel('Estado Marital y Hipoteca')
+plt.ylabel('Cantidad')
+plt.grid(axis="y", linestyle='--', color="black", alpha=0.3)
+plt.gcf().autofmt_xdate()
+
+# Mostrar el gráfico
+plt.show()
 ---
 
 ## **Resultados**
