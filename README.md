@@ -1,4 +1,4 @@
-### BANK TERM DEPOSIT PREDICTION
+### Bank Term Deposit Prediction: Kaggle Challenge
 <img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/BANK.png">
 
 ## **Descripción del Proyecto**
