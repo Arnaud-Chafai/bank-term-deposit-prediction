@@ -78,7 +78,7 @@ Durante la exploración de los datos, se observó que varias variables socioecon
 #### **Mapa de Correlación:**  
 El siguiente mapa de calor muestra las correlaciones entre las variables socioeconómicas:
 
-<img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/Correlaci%C3%B3n.png" alt="Mapa de Correlación" width="400">
+<img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/Correlaci%C3%B3n.png" alt="Mapa de Correlación" width="600">
 
 ---
 
@@ -88,14 +88,14 @@ Se aplicó **PCA** (Análisis de Componentes Principales) para reducir la cantid
 - **Explicación:** Se conservaron **tres componentes principales** que explican el **99.3% de la variabilidad** de los datos.
 - El número de componentes se seleccionó utilizando el **método del codo**, como se muestra en la siguiente gráfica:
 
-<img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/codo.png" alt="Método del Codo" width="400">
+<img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/codo.png" alt="Método del Codo" width="600">
 
 ---
 
 ### **Clusters del Contexto Económico y Social + PCA** 📊  
 Con los **tres componentes principales** obtenidos, se aplicó **K-means** para identificar patrones económicos y agrupar a los clientes en diferentes clusters según su contexto socioeconómico.
 
-<img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/Silhouette.png" alt="Silhouette Score" width="400">
+<img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/Silhouette.png" alt="Silhouette Score" width="600">
 
 ---
 
@@ -114,7 +114,7 @@ Con los **tres componentes principales** obtenidos, se aplicó **K-means** para 
 ### **Visualización de los Clusters en el Espacio PCA:**  
 Finalmente, los clusters formados fueron proyectados en el espacio definido por los **componentes principales**.
 
-<img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/pca.png" alt="Visualización PCA Clusters" width="400">
+<img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/pca.png" alt="Visualización PCA Clusters" width="600">
 
 ---
 
