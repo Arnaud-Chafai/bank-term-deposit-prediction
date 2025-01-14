@@ -178,7 +178,7 @@ print(f"\nRMSE en el conjunto de prueba: {test_rmse:.4f}")
 
 
 
-- **Modelo ganador:** Random Forest con validación cruzada y optimización de hiperparámetros.
+- **Modelo con mejor rendimiento:** Random Forest con validación cruzada y optimización de hiperparámetros.
 - **Puntuación final:**  
   - **AUC en validación:** 0.803  
   - **AUC en Kaggle:** 0.780
