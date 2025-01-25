@@ -74,13 +74,6 @@ Este apartado muestra el flujo de trabajo seguido para el análisis de las varia
 ### **Análisis de Correlación y Reducción de Dimensionalidad (PCA)**  
 Durante la exploración de los datos, se observó que varias variables socioeconómicas presentaban una **alta correlación** entre sí. Esto puede generar redundancia y afectar el rendimiento del modelo, por lo que se decidió realizar una **reducción de dimensionalidad**.
 
-#### **Mapa de Correlación:**  
-El siguiente mapa de calor muestra las correlaciones entre las variables socioeconómicas:
-
-<img src="https://github.com/Arnaud-Chafai/bank-term-deposit-prediction/blob/main/Screenshots/Correlaci%C3%B3n.png" alt="Mapa de Correlación" width="600">
-
----
-
 ### **Aplicación de PCA (Análisis de Componentes Principales)**  
 Se aplicó **PCA** (Análisis de Componentes Principales) para reducir la cantidad de variables manteniendo la mayor cantidad posible de información relevante.
 
